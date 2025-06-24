@@ -1,9 +1,10 @@
 
 func kidsWithCandies(candies []int, extraCandies int) []bool {
     maxCandies:= candies[0]
-    for i, candy := range candies{
+    for _, candy := range candies{
         if(candy>maxCandies){
-            maxCandies = candies[i]
+            
+            maxCandies = candy
         }
     }
      result :=make([]bool,len(candies))
