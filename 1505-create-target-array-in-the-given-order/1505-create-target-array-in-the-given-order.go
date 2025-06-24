@@ -4,8 +4,8 @@ func createTargetArray(nums []int, index []int) []int {
         if len(result) == index[k] {
             result=append(result,nums[index[k]])
         }else {
-            result=append(result,0)
-            copy(result[v+1:],result[v:])
+            result=append(result,0) // add zero to the end 
+            copy(result[v+1:],result[v:])  // shift to the right 
             result[index[k]]=nums[k]
         }
     }
